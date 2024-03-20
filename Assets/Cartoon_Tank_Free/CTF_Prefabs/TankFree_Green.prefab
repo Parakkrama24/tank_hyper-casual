@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 2512267391393866613}
   m_Layer: 0
   m_Name: TankFree_Green
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  enemyData: {fileID: 11400000, guid: 936abbfe597715944b6aea43f9f3a843, type: 2}
 --- !u!54 &2512267391393866613
 Rigidbody:
   m_ObjectHideFlags: 0

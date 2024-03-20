@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7946941371417153107}
   m_Layer: 0
   m_Name: TankFree_Yel
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  enemyData: {fileID: 11400000, guid: 01c97264f1365e647b3e3268b7cda134, type: 2}
 --- !u!65 &3116914502372548523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -217,7 +218,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013459266845585946}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

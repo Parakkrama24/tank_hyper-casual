@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 2626393147753585793}
   m_Layer: 0
   m_Name: TankFree_Red
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  enemyData: {fileID: 11400000, guid: 6f20c9d2e4ce54c499c956954101c3bc, type: 2}
 --- !u!54 &1157715177773897210
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -363,7 +364,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3503318476722469206}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

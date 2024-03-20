@@ -12,6 +12,7 @@ public class tankController : MonoBehaviour
     [SerializeField] private float wheelRotationSpeed = 200f;
     private Rigidbody rb;
     private float moveinput;
+    private float wheelRotateInput = 1;//only hyper cadhuval game 
     private float rotationInputs;
     void Start()
     {
@@ -19,7 +20,8 @@ public class tankController : MonoBehaviour
     }
     void Update()
     {
-        moveinput = Input.GetAxis("Vertical");
+        moveinput = 0;// Input.GetAxis("Vertical");
+
         rotationInputs = Input.GetAxis("Horizontal");
         RotateWheels(moveinput, rotationInputs);
     }
@@ -42,7 +44,7 @@ public class tankController : MonoBehaviour
     }
     void RotateWheels(float MoveInput,float rotationInput)
     {
-        float wheelRotation= moveinput* wheelRotationSpeed*Time.fixedDeltaTime;
+        float wheelRotation = wheelRotateInput * wheelRotationSpeed*Time.fixedDeltaTime;
 
         //move leftweels
 

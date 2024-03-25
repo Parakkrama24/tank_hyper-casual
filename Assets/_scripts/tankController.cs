@@ -28,7 +28,7 @@ public class tankController : MonoBehaviour
     private void FixedUpdate()
     {
         MoveTankObj(moveinput);
-        RotateTank(rotationInputs);
+       // RotateTank(rotationInputs);
     }
     void MoveTankObj(float input)
     {
@@ -38,7 +38,10 @@ public class tankController : MonoBehaviour
     void RotateTank(float input)
     {
         float rotation = input* rotateSpeed*Time.fixedDeltaTime;
+        Debug.Log(rotation);
+        rotation= Mathf.Clamp(rotation,-45,45);
         Quaternion turnrotation = Quaternion.Euler(0f, rotation, 0f);
+
         rb.MoveRotation(rb.rotation * turnrotation);
 
     }

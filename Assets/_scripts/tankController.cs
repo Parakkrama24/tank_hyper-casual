@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class tankController : MonoBehaviour
 {
@@ -14,6 +15,14 @@ public class tankController : MonoBehaviour
     private float moveinput;
     private float wheelRotateInput = 1;//only hyper cadhuval game 
     private float rotationInputs;
+    [HideInInspector] public bool isDead;
+
+    private enum state{
+
+        dead,
+        live
+
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -65,6 +74,19 @@ public class tankController : MonoBehaviour
             {
                 wheel.transform.Rotate(wheelRotation + rotationInput * wheelRotationSpeed * Time.deltaTime,0.0f,0.0f);
             }
+        }
+    }
+
+    private void changeState(string state)
+    {
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            isDead= true;
         }
     }
 }

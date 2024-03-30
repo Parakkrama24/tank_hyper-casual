@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class bulatehandel : MonoBehaviour
 {
     [SerializeField] private float launchSpeed = 75.0f;
     [SerializeField] private GameObject BulatePreFab;
     [SerializeField] private GameObject ShootFx;
+    [SerializeField] private AudioClip shootSound;
+    private AudioSource audioSource;
+
     private bool isShoot;
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void  Shoot()
@@ -39,6 +43,7 @@ public class bulatehandel : MonoBehaviour
 
         //instantialte
         GameObject bulateNew = Instantiate(BulatePreFab, spawmPotitonn, spawnRotation);
+        audioSource.Play();
         GameObject fx = Instantiate(ShootFx, spawmPotitonn, spawnRotation);
         StartCoroutine(destroyFx(fx));
 
